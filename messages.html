@@ -1,0 +1,260 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SocialSpace - Messages</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f0f2f5;
+        height: 100%;
+    }
+    .app-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        height: calc(100% - 100px);
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        background-color: #4267B2;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 50px;
+        z-index: 999;
+    }
+    .nav-item {
+        color: #4267B2;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .messages-container {
+        display: flex;
+        height: 100%;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .contacts-list {
+        width: 30%;
+        border-right: 1px solid #e0e0e0;
+        overflow-y: auto;
+    }
+    .contact-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .contact-item:hover {
+        background-color: #f0f2f5;
+    }
+    .contact-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    .contact-info {
+        flex-grow: 1;
+    }
+    .contact-name {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .contact-last-message {
+        font-size: 0.9em;
+        color: #65676B;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .chat-area {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    .chat-header {
+        padding: 15px;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        align-items: center;
+    }
+    .chat-messages {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 15px;
+    }
+    .message {
+        max-width: 70%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 18px;
+        position: relative;
+    }
+    .message-received {
+        background-color: #f0f2f5;
+        align-self: flex-start;
+    }
+    .message-sent {
+        background-color: #0084ff;
+        color: white;
+        align-self: flex-end;
+    }
+    .message-timestamp {
+        font-size: 0.8em;
+        color: #65676B;
+        margin-top: 5px;
+    }
+    .chat-input {
+        display: flex;
+        padding: 15px;
+        border-top: 1px solid #e0e0e0;
+    }
+    .chat-input input {
+        flex-grow: 1;
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        margin-right: 10px;
+    }
+    .chat-input button {
+        background-color: #0084ff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo.html
+        </header>
+        <nav>
+            <a href="/home.html
+            <a href="/home/profile.html
+            <a href="/home/messages.html
+            <a href="/home/notifications.html
+        </nav>
+        
+        <div class="messages-container">
+            <div class="contacts-list">
+                <div class="contact-item active">
+                    <img src="e:\download\2.jfif" alt="sararat profile picture" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name">sararat</div>
+                        <div class="contact-last-message">hi sararat</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <img src="e:\download\3.jfif" alt="arlinda profile picture" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name">arlinda</div>
+                        <div class="contact-last-message">mag skol ka fo?</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <img src="e:\download\4.jpg" alt="jhermae profile picture" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name">jhermae</div>
+                        <div class="contact-last-message">naa koy chika kang athenaaa</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-area">
+                <div class="chat-header">
+                    <img src="e:\download\5.jpg" alt="mikang profile picture" class="contact-avatar">
+                    <div class="contact-name">mikang</div>
+                    <div class="contact-last-message">hi mikang</div>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message message-received">
+                        Hey, how's it going?
+                        <div class="message-timestamp">10:30 AM</div>
+                    </div>
+                    <div class="message message-sent">
+                        Hi Emily! I'm doing great, thanks for asking. How about you?
+                        <div class="message-timestamp">10:32 AM</div>
+                    </div>
+                    <div class="message message-received">
+                        I'm good too! Just finished a big project at work. Feeling accomplished!
+                        <div class="message-timestamp">10:35 AM</div>
+                    </div>
+                    <div class="message message-sent">
+                        That's awesome! Congrats on finishing the project. We should celebrate sometime this week.
+                        <div class="message-timestamp">10:37 AM</div>
+                    </div>
+                    <div class="message message-received">
+                        Definitely! How about Friday evening? We could try that new restaurant downtown.
+                        <div class="message-timestamp">10:40 AM</div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type a message..." id="messageInput">
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageInput = document.getElementById('messageInput');
+            const sendButton = document.getElementById('sendButton');
+
+            function sendMessage() {
+                const messageText = messageInput.value.trim();
+                if (messageText) {
+                    const messageElement = document.createElement('div');
+                    messageElement.classList.add('message', 'message-sent');
+                    messageElement.innerHTML = `
+                        ${messageText}
+                        <div class="message-timestamp">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
+                    `;
+                    chatMessages.appendChild(messageElement);
+                    messageInput.value = '';
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+            }
+
+            sendButton.addEventListener('click', sendMessage);
+
+            messageInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+
+            const contactItems = document.querySelectorAll('.contact-item');
+            contactItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    contactItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body></html>
